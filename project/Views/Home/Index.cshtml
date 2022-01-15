@@ -1,0 +1,66 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div id="errorModal" class="modal fade" role="dialog" tabindex="-1" aria-hidden="true" data-backdrop="static">
+        <div class=" modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span id="errorName"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div id="loginBlock" style="display: none">
+            <div class="header">
+                <h2>Welcome to math competition!</h2>
+            </div>
+            <span class="name">Your Name:</span>
+            <input id="txtUserName" type="text" />
+            <input id="btnLogin" type="button" value="Join" />
+        </div>
+        <div id="compitForm" style="display: none">
+            <div class="header">
+                <h2>You registered as <span class="bold" id="currentUser"></span></h2>
+            </div>
+            <div class="left" id="inputForm">
+                <div id="wait"><p class="bold">Please wait a question... </p></div>
+                <div id="question" style="display: none">
+                    <p class="bold">Question: <span id="qstnText" /></p>
+                    <p class="bold">Choose right variant (only integer value):</p>
+                    <p class="variant"><input type="radio" name="variant" value="" /><span /></p>
+                    <p class="variant"><input type="radio" name="variant" value="" /><span /></p>
+                    <p class="variant"><input type="radio" name="variant" value="" /><span /></p>
+                    <input type="button" id="submit" value="Send" />
+                </div>
+            </div>
+            <div class="left" id="resultForm">
+                <p class="bold">Competitor results:</p>
+                <div id="result"></div>
+            </div>
+        </div>
+        <input id="qstnId" type="hidden" />
+        <input id="username" type="hidden" />
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.3.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/util.js"></script>
+</body>
+</html>

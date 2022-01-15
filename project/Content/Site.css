@@ -1,0 +1,89 @@
+﻿body {
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.main {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 810px;
+    min-height: 400px;
+}
+
+.main:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.header {
+    margin-bottom: 25px;
+    border-bottom: solid thin #03758f;
+}
+
+.left {
+    float:left;
+    padding: 10px;
+    width:400px;
+    text-align: left;
+}
+
+#inputForm {
+    border-right: solid thin #03758f;
+}
+
+#resultForm {
+    margin-left: -1px;
+    border-left: solid thin #03758f;
+}
+
+input[type="radio"] {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
